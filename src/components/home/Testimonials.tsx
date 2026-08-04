@@ -1,12 +1,10 @@
-import { Quote } from "lucide-react";
-
 import { useTestimonials } from "@/hooks/useOutreach";
 import type { Testimonial } from "@/types";
 
 const roleLabels: Record<Testimonial["author_role"], string> = {
-  community: "Community member",
-  volunteer: "Volunteer",
-  partner: "Partner",
+  community: "community member",
+  volunteer: "volunteer",
+  partner: "brand partner",
 };
 
 export function Testimonials() {
@@ -17,47 +15,51 @@ export function Testimonials() {
   }
 
   return (
-    <section id="stories" className="scroll-mt-20 py-20 sm:py-28">
+    <section id="stories" className="scroll-mt-24 py-20 sm:py-28">
       <div className="container-page">
-        <div className="max-w-2xl">
-          <span className="text-sm font-bold uppercase tracking-wide text-primary">
-            Stories
-          </span>
-          <h2 className="mt-3 font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-            From the community, volunteers, and partners.
+        <div className="flex max-w-2xl flex-col gap-5">
+          <span className="font-mono text-[13px] uppercase text-primary">05 — stories</span>
+          <h2 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-5xl">
+            Voices from the community.
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 flex flex-col border-t-[1.5px] border-ink">
           {isLoading &&
             Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="h-56 animate-pulse rounded-3xl bg-sage" />
+              <div key={i} className="h-32 animate-pulse border-b-[1.5px] border-ink/20" />
             ))}
 
           {testimonials?.map((testimonial) => (
             <figure
               key={testimonial.id}
-              className="flex flex-col gap-4 rounded-3xl bg-sage p-7"
+              className="flex flex-col gap-6 border-b-[1.5px] border-ink py-10 sm:flex-row sm:items-start sm:justify-between sm:gap-10"
             >
-              <Quote className="text-primary/30" size={28} />
-              <blockquote className="flex-1 text-sm leading-relaxed text-ink">
+              <span aria-hidden className="font-display text-6xl font-extrabold leading-none text-secondary sm:text-7xl">
+                “
+              </span>
+              <blockquote className="flex-1 font-display text-xl font-bold leading-snug tracking-tight text-ink sm:text-[28px]">
                 {testimonial.content}
               </blockquote>
-              <figcaption className="flex items-center gap-3 border-t border-primary/10 pt-4">
+              <figcaption className="flex shrink-0 items-center gap-3.5 sm:flex-row-reverse sm:text-right">
                 {testimonial.photo ? (
                   <img
                     src={testimonial.photo}
                     alt={testimonial.author_name}
-                    className="h-10 w-10 rounded-full object-cover"
+                    className="h-[52px] w-[52px] rounded-full object-cover"
                   />
                 ) : (
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-display text-sm font-bold text-cream">
+                  <div className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-card font-display text-lg font-bold text-primary">
                     {testimonial.author_name.charAt(0)}
                   </div>
                 )}
                 <div>
-                  <p className="text-sm font-semibold text-ink">{testimonial.author_name}</p>
-                  <p className="text-xs text-ink-soft">{roleLabels[testimonial.author_role]}</p>
+                  <p className="font-body text-lg font-semibold text-ink">{testimonial.author_name}</p>
+                  <p className="font-mono text-[13px] uppercase text-ink-soft">
+                    {testimonial.initiative_title
+                      ? `${roleLabels[testimonial.author_role]}, ${testimonial.initiative_title}`
+                      : roleLabels[testimonial.author_role]}
+                  </p>
                 </div>
               </figcaption>
             </figure>

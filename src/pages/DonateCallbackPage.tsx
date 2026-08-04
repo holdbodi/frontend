@@ -2,6 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { CheckCircle2, Loader2, XCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
+import { ShareButtons } from "@/components/ui/ShareButtons";
 import { useVerifyDonation } from "@/hooks/useOutreach";
 import { formatNaira } from "@/lib/format";
 
@@ -61,6 +62,18 @@ export function DonateCallbackPage() {
                   {data.beneficiaries_supported} beneficiar
                   {data.beneficiaries_supported === 1 ? "y" : "ies"}.
                 </p>
+
+                <div className="mt-8">
+                  <p className="mb-4 font-mono text-xs uppercase text-ink-soft">
+                    Spread the word
+                  </p>
+                  <ShareButtons
+                    url={`${window.location.origin}/donate`}
+                    text={`I just helped fund ${data.beneficiaries_supported} beneficiar${
+                      data.beneficiaries_supported === 1 ? "y" : "ies"
+                    } through holdbodí. Join me in making food access easier across Nigeria!`}
+                  />
+                </div>
               </>
             ) : (
               <>

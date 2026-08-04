@@ -12,6 +12,9 @@ export function formatNumber(value: number): string {
   return new Intl.NumberFormat("en-NG").format(value);
 }
 
-export function cx(...classes: Array<string | false | null | undefined>): string {
-  return classes.filter(Boolean).join(" ");
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cx(...inputs: ClassValue[]): string {
+  return twMerge(clsx(inputs));
 }

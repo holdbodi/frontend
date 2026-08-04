@@ -1,28 +1,25 @@
-import { HandHeart, MapPin, Store, Users } from "lucide-react";
-
 import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 import { useImpactMetrics } from "@/hooks/useOutreach";
 
 const stats = [
-  { key: "people_supported" as const, label: "People supported", icon: HandHeart },
-  { key: "volunteers" as const, label: "Volunteers", icon: Users },
-  { key: "brands" as const, label: "Brand partners", icon: Store },
-  { key: "communities_reached" as const, label: "Communities reached", icon: MapPin },
+  { key: "people_supported" as const, label: "people supported" },
+  { key: "volunteers" as const, label: "volunteers" },
+  { key: "brands" as const, label: "brand partners" },
+  { key: "communities_reached" as const, label: "communities reached" },
 ];
 
 export function ImpactTicker() {
   const { data, isLoading } = useImpactMetrics();
 
   return (
-    <section className="relative bg-primary-dark">
-      <div className="container-page grid grid-cols-2 divide-x divide-cream/15 py-8 lg:grid-cols-4">
-        {stats.map(({ key, label, icon: Icon }) => (
-          <div key={key} className="flex flex-col items-center gap-1.5 px-4 text-center">
-            <Icon className="mb-1 text-secondary" size={22} />
-            <span className="font-display text-2xl font-extrabold text-cream sm:text-3xl">
+    <section className="container-page">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-10 py-14 sm:grid-cols-4 sm:gap-x-0">
+        {stats.map(({ key, label }) => (
+          <div key={key} className="border-l-[1.5px] border-ink px-6">
+            <p className="font-display text-4xl font-extrabold leading-none tracking-tight text-ink sm:text-5xl lg:text-[72px]">
               {isLoading || !data ? "—" : <AnimatedNumber value={data[key]} />}
-            </span>
-            <span className="text-xs font-medium text-cream/70 sm:text-sm">{label}</span>
+            </p>
+            <p className="mt-2 font-mono text-[13px] uppercase text-ink-soft">{label}</p>
           </div>
         ))}
       </div>

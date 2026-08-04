@@ -2,39 +2,44 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
-import logo from "@/assets/images/logo.png";
+import { Marquee } from "@/components/layout/Marquee";
 import { Button } from "@/components/ui/Button";
 
 const navLinks = [
-  { label: "About", href: "/#about" },
-  { label: "How it works", href: "/#how-it-works" },
-  { label: "Initiatives", href: "/#initiatives" },
-  { label: "Stories", href: "/#stories" },
+  { label: "about", href: "/#about" },
+  { label: "how it works", href: "/#how-it-works" },
+  { label: "initiatives", href: "/#initiatives" },
+  { label: "gallery", href: "/#gallery" },
+  { label: "stories", href: "/#stories" },
 ];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-cream/90 backdrop-blur-sm">
-      <div className="container-page flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-          <img src={logo} alt="holdbodí" className="h-8 w-auto" />
+    <header className="sticky top-0 z-50 bg-cream">
+      <div className="container-page flex h-[102px] items-center justify-between">
+        <Link
+          to="/"
+          className="font-display text-[28px] font-bold tracking-tight text-ink"
+          onClick={() => setIsOpen(false)}
+        >
+          holdbodí
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-[30px] lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink-soft transition-colors hover:text-primary"
+              className="font-mono text-[13px] uppercase text-ink transition-opacity hover:opacity-60"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <NavLink to="/volunteer">
             <Button variant="outline" size="md">
               Volunteer
@@ -48,7 +53,7 @@ export function Header() {
         </div>
 
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-full text-ink md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-ink lg:hidden"
           onClick={() => setIsOpen((v) => !v)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
@@ -57,13 +62,13 @@ export function Header() {
       </div>
 
       {isOpen && (
-        <div className="border-t border-line bg-cream md:hidden">
+        <div className="border-t-[1.5px] border-ink bg-cream lg:hidden">
           <div className="container-page flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink-soft hover:bg-sage hover:text-primary"
+                className="rounded-lg px-3 py-2.5 font-mono text-[13px] uppercase text-ink hover:bg-card"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -84,6 +89,8 @@ export function Header() {
           </div>
         </div>
       )}
+
+      <Marquee />
     </header>
   );
 }

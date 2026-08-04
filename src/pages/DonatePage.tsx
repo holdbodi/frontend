@@ -128,10 +128,10 @@ export function DonatePage() {
                     setCustomAmount(false);
                     setValue("amount", tier.amount, { shouldValidate: true });
                   }}
-                  className={`rounded-xl border px-3 py-3 text-left text-sm transition-colors ${
+                  className={`rounded-xl border-[1.5px] px-3 py-3 text-left text-sm transition-colors ${
                     !customAmount && amount === tier.amount
-                      ? "border-primary bg-sage"
-                      : "border-line bg-white hover:border-primary/40"
+                      ? "border-ink bg-card"
+                      : "border-ink/20 bg-card hover:border-ink/40"
                   }`}
                 >
                   <span className="block font-semibold text-ink">{tier.label}</span>
@@ -141,8 +141,8 @@ export function DonatePage() {
               <button
                 type="button"
                 onClick={() => setCustomAmount(true)}
-                className={`rounded-xl border px-3 py-3 text-left text-sm transition-colors ${
-                  customAmount ? "border-primary bg-sage" : "border-line bg-white hover:border-primary/40"
+                className={`rounded-xl border-[1.5px] px-3 py-3 text-left text-sm transition-colors ${
+                  customAmount ? "border-ink bg-card" : "border-ink/20 bg-card hover:border-ink/40"
                 }`}
               >
                 <span className="block font-semibold text-ink">Custom amount</span>

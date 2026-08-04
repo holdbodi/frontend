@@ -1,74 +1,36 @@
 import { Link } from "react-router-dom";
-import { Mail } from "lucide-react";
 
-import logo from "@/assets/images/logo.png";
+const year = new Date().getFullYear();
+
+const getInvolvedLinks = [
+  { label: "Donate", to: "/donate" },
+  { label: "Volunteer", to: "/volunteer" },
+  { label: "Donate food items", to: "/food-donation" },
+  { label: "Become a partner", to: "/partner" },
+];
+
+const learnMoreLinks = [
+  { label: "About Community Support", href: "/#about" },
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Current Initiatives", href: "/#initiatives" },
+  { label: "Stories", href: "/#stories" },
+];
 
 export function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="border-t border-line bg-cream-deep">
-      <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-          <img src={logo} alt="holdbodí" className="h-7 w-auto" />
-          <p className="max-w-xs text-sm text-ink-soft">
-            Making food access easier — connecting people willing to help with
+    <footer className="bg-primary-dark pb-8 pt-20">
+      <div className="container-page flex flex-col items-start justify-between gap-12 sm:flex-row sm:gap-8">
+        <div className="flex max-w-[307px] flex-col gap-7">
+          <p className="font-body text-base leading-relaxed text-cream/75">
+            Making food access easier, connecting people willing to help with
             communities facing food insecurity across Nigeria.
           </p>
-        </div>
-
-        <div className="flex flex-col gap-3">
-          <h4 className="font-display text-sm font-bold uppercase tracking-wide text-ink">
-            Get involved
-          </h4>
-          <Link to="/donate" className="text-sm text-ink-soft hover:text-primary">
-            Donate
-          </Link>
-          <Link to="/volunteer" className="text-sm text-ink-soft hover:text-primary">
-            Volunteer
-          </Link>
-          <Link to="/food-donation" className="text-sm text-ink-soft hover:text-primary">
-            Donate food items
-          </Link>
-          <Link to="/partner" className="text-sm text-ink-soft hover:text-primary">
-            Become a partner
-          </Link>
-        </div>
-
-        <div className="flex flex-col gap-3">
-          <h4 className="font-display text-sm font-bold uppercase tracking-wide text-ink">
-            Learn more
-          </h4>
-          <a href="/#about" className="text-sm text-ink-soft hover:text-primary">
-            About Community Support
-          </a>
-          <a href="/#how-it-works" className="text-sm text-ink-soft hover:text-primary">
-            How it works
-          </a>
-          <a href="/#initiatives" className="text-sm text-ink-soft hover:text-primary">
-            Current initiatives
-          </a>
-          <a href="/#stories" className="text-sm text-ink-soft hover:text-primary">
-            Stories
-          </a>
-        </div>
-
-        <div className="flex flex-col gap-3">
-          <h4 className="font-display text-sm font-bold uppercase tracking-wide text-ink">
-            Contact
-          </h4>
-          <a
-            href="mailto:hello@holdbodi.org"
-            className="flex items-center gap-2 text-sm text-ink-soft hover:text-primary"
-          >
-            <Mail size={16} /> hello@holdbodi.org
-          </a>
-          <div className="mt-1 flex items-center gap-3">
+          <div className="flex gap-3.5">
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-sage px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary hover:text-cream"
+              className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-mono text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
             >
               Instagram
             </a>
@@ -76,18 +38,59 @@ export function Footer() {
               href="https://twitter.com"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-sage px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary hover:text-cream"
+              className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-mono text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
             >
               X (Twitter)
             </a>
           </div>
         </div>
+
+        <div className="flex flex-col gap-3.5">
+          <h4 className="font-mono text-[12.5px] uppercase text-secondary">Get involved</h4>
+          {getInvolvedLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="font-body text-base text-cream/60 transition-colors hover:text-cream"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-3.5">
+          <h4 className="font-mono text-[12.5px] uppercase text-secondary">Learn more</h4>
+          {learnMoreLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="font-body text-base text-cream/60 transition-colors hover:text-cream"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-3.5">
+          <h4 className="font-mono text-[12.5px] uppercase text-secondary">Contact</h4>
+          <a
+            href="mailto:hello@holdbodi.org"
+            className="font-body text-base text-cream/60 transition-colors hover:text-cream"
+          >
+            hello@holdbodi.org
+          </a>
+        </div>
       </div>
 
-      <div className="border-t border-line py-5">
-        <p className="container-page text-xs text-ink-soft">
-          © {year} holdbodí Community Support. All rights reserved.
+      <div className="mt-[70px] border-b border-cream/25">
+        <p className="select-none overflow-hidden text-center font-display text-[clamp(4rem,18vw,13.5rem)] font-extrabold leading-[0.78] tracking-tighter text-cream/[0.14]">
+          holdbodí
         </p>
+      </div>
+
+      <div className="container-page flex flex-col items-center justify-between gap-2 py-[22px] font-mono text-[12.5px] text-cream/75 sm:flex-row">
+        <p>© {year} holdbodí Community Support. All rights reserved.</p>
+        <p className="uppercase">Making food access easier ✦</p>
       </div>
     </footer>
   );

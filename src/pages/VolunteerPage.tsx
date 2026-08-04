@@ -166,7 +166,7 @@ export function VolunteerPage() {
               {preview ? (
                 <img src={preview} alt="Preview" className="h-14 w-14 rounded-full object-cover" />
               ) : (
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sage text-primary">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-card text-primary">
                   <Upload size={20} />
                 </div>
               )}
