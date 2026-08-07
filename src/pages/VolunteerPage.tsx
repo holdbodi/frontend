@@ -11,7 +11,7 @@ import { Field, Input, Select } from "@/components/ui/Field";
 import { useCreateVolunteer } from "@/hooks/useOutreach";
 import { getApiErrorMessage } from "@/lib/api";
 
-const MAX_PHOTO_BYTES = 5 * 1024 * 1024;
+const MAX_PHOTO_BYTES = 15 * 1024 * 1024;
 
 const volunteerSchema = z.object({
   fullName: z.string().min(2, "Enter your full name."),
@@ -27,7 +27,7 @@ const volunteerSchema = z.object({
   profilePhoto: z
     .instanceof(FileList)
     .refine((files) => files.length === 1, "Profile photo is required.")
-    .refine((files) => files[0]?.size <= MAX_PHOTO_BYTES, "Photo must be under 5MB."),
+    .refine((files) => files[0]?.size <= MAX_PHOTO_BYTES, "Photo must be under 15MB."),
 });
 
 type VolunteerForm = z.infer<typeof volunteerSchema>;
@@ -171,7 +171,7 @@ export function VolunteerPage() {
                 </div>
               )}
               <span className="text-sm text-ink-soft">
-                {preview ? "Change photo" : "Click to upload a photo (max 5MB)"}
+                {preview ? "Change photo" : "Click to upload a photo (max 15MB)"}
               </span>
             </div>
             <input
