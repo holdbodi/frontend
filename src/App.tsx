@@ -6,6 +6,7 @@ import { DonateCallbackPage } from "@/pages/DonateCallbackPage";
 import { DonatePage } from "@/pages/DonatePage";
 import { FoodDonationPage } from "@/pages/FoodDonationPage";
 import { HomePage } from "@/pages/HomePage";
+import { InitiativeDetailPage } from "@/pages/InitiativeDetailPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 import { PartnerPage } from "@/pages/PartnerPage";
 import { VolunteerPage } from "@/pages/VolunteerPage";
@@ -29,6 +30,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/initiatives/:slug" element={<InitiativeDetailPage />} />
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/donate/callback" element={<DonateCallbackPage />} />
           <Route path="/volunteer" element={<VolunteerPage />} />

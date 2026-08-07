@@ -27,7 +27,7 @@ export function Footer() {
           </p>
           <div className="flex gap-3.5">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/holdbodi"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-mono text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
@@ -35,7 +35,7 @@ export function Footer() {
               Instagram
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/holdbodi"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-mono text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
@@ -77,7 +77,7 @@ export function Footer() {
             href="mailto:hello@holdbodi.org"
             className="font-body text-base text-cream/60 transition-colors hover:text-cream"
           >
-            hello@holdbodi.org
+            hello@holdbodi.com
           </a>
         </div>
       </div>

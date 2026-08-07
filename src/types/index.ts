@@ -17,6 +17,7 @@ export interface Initiative {
   target_beneficiaries: number | null;
   amount_raised: string;
   beneficiaries_funded: number;
+  donations_count: number;
   progress_percentage: number;
   start_date: string | null;
   end_date: string | null;

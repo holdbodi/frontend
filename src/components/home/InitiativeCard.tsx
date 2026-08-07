@@ -33,6 +33,7 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
     : initiative.initiative_type === "sara"
       ? "nationwide"
       : "outreach";
+  const detailHref = `/initiatives/${initiative.slug}`;
 
   return (
     <div
@@ -40,8 +41,9 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
         featured ? "flex-col lg:flex-row" : "flex-col"
       }`}
     >
-      <div
-        className={`relative shrink-0 bg-ink/10 ${
+      <Link
+        to={detailHref}
+        className={`relative block shrink-0 overflow-hidden bg-ink/10 ${
           featured ? "h-56 lg:h-auto lg:w-[60%]" : "h-56"
         }`}
       >
@@ -49,7 +51,7 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
           <img
             src={initiative.cover_image}
             alt={initiative.title}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center font-display text-lg font-bold text-ink/20">
@@ -61,10 +63,10 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
         >
           {badgeLabels[initiative.status]}
         </span>
-      </div>
+      </Link>
 
       <div className={`flex flex-1 flex-col gap-7 p-6 ${featured ? "lg:p-11" : ""}`}>
-        <div className="flex flex-col gap-2.5">
+        <Link to={detailHref} className="flex flex-col gap-2.5">
           <div className="flex items-center gap-2.5 font-mono text-[13px] uppercase text-meta">
             {featured && (
               <>
@@ -75,7 +77,7 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
             <span>{metaLabel}</span>
           </div>
           <h3
-            className={`font-display font-extrabold tracking-tight text-ink ${
+            className={`font-display font-extrabold tracking-tight text-ink transition-colors hover:text-primary ${
               featured ? "text-3xl sm:text-4xl" : "text-xl"
             }`}
           >
@@ -86,7 +88,7 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
               {initiative.description}
             </p>
           )}
-        </div>
+        </Link>
 
         <div className="mt-auto flex flex-col gap-3.5">
           <div className="h-3 w-full overflow-hidden rounded-full border border-ink bg-cream">
@@ -116,12 +118,20 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
           </div>
         </div>
 
-        <Link
-          to={`/donate?initiative=${initiative.slug}`}
-          className="inline-flex items-center justify-center rounded-full border-[1.5px] border-ink bg-primary px-6 py-3 font-body text-sm font-semibold text-cream/85 transition-colors hover:bg-primary-dark"
-        >
-          Donate to this initiative
-        </Link>
+        <div className="flex gap-3">
+          <Link
+            to={detailHref}
+            className="inline-flex flex-1 items-center justify-center rounded-full border-[1.5px] border-ink bg-transparent px-6 py-3 font-body text-sm font-semibold text-ink transition-colors hover:bg-ink/5"
+          >
+            View details
+          </Link>
+          <Link
+            to={`/donate?initiative=${initiative.slug}`}
+            className="inline-flex flex-1 items-center justify-center rounded-full border-[1.5px] border-ink bg-primary px-6 py-3 font-body text-sm font-semibold text-cream/85 transition-colors hover:bg-primary-dark"
+          >
+            Donate
+          </Link>
+        </div>
       </div>
     </div>
   );
