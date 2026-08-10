@@ -11,7 +11,7 @@ import { Field, Input, Select } from "@/components/ui/Field";
 import { useCreateVolunteer } from "@/hooks/useOutreach";
 import { getApiErrorMessage } from "@/lib/api";
 
-const MAX_PHOTO_BYTES = 15 * 1024 * 1024;
+const MAX_PHOTO_BYTES = 50 * 1024 * 1024;
 
 const volunteerSchema = z.object({
   fullName: z.string().min(2, "Enter your full name."),
