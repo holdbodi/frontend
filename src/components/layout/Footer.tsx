@@ -76,7 +76,7 @@ export function Footer() {
             href="mailto:hello@holdbodi.org"
             className="font-body text-base text-cream/60 transition-colors hover:text-cream"
           >
-            hello@holdbodi.org
+            hello@holdbodi.com
           </a>
         </div>
       </div>
