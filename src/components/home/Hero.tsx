@@ -13,8 +13,8 @@ export function Hero() {
           <span className="inline-block h-[54px] w-[110px] overflow-hidden rounded-[20px] border-[1.5px] border-ink align-middle sm:h-[76px] sm:w-[150px]">
             <img src={boySmiling} alt="" className="h-full w-full object-cover" />
           </span>
-          <span>willing</span>
-          <span>to help with communities</span>
+          <span>with</span>
+          <span>communities</span>
           <span className="inline-block h-[54px] w-[110px] overflow-hidden rounded-[20px] border-[1.5px] border-ink align-middle sm:h-[76px] sm:w-[150px]">
             <img src={manBoxes} alt="" className="h-full w-full object-cover" />
           </span>
@@ -25,8 +25,8 @@ export function Hero() {
         <div className="mt-12 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <p className="max-w-[604px] font-body text-lg leading-relaxed text-ink sm:text-xl">
             Millions of Nigerians don't know where their next meal is coming
-            from. holdbodí brings individuals, brands, and volunteers together
-            to change that, one plate at a time.
+            from. holdbodí community support connects individuals, brands, and volunteers to
+            support people and cummunities who need food.
           </p>
           <div className="flex shrink-0 items-center gap-4">
             <Link to="/donate">

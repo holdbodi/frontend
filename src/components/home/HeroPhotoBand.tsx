@@ -9,9 +9,9 @@ export function HeroPhotoBand() {
           alt="A child at a holdbodí food distribution event, holding up a pack of noodles."
           className="h-full w-full object-cover"
         />
-        <span className="absolute left-7 top-7 rounded-full border-[1.5px] border-ink bg-secondary px-4 py-2 font-mono text-[12.5px] uppercase text-ink">
+        {/* <span className="absolute left-7 top-7 rounded-full border-[1.5px] border-ink bg-secondary px-4 py-2 font-mono text-[12.5px] uppercase text-ink">
           making food access easier
-        </span>
+        </span> */}
       </div>
     </section>
   );

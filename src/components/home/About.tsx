@@ -19,16 +19,18 @@ export function About() {
             01 — About Community Support
           </span>
           <h2 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-5xl">
-            A shared table, built by a community.
+            holdbodí Community Support .
           </h2>
           <div className="flex flex-col gap-5 font-body text-lg leading-relaxed text-ink sm:text-xl">
             <p>
-              Millions of people across Nigeria do not know where their next
-              meal will come from. holdbodí Community Support brings together
-              individuals, brands, and volunteers to support people and
-              communities facing food insecurity, with transparency,
-              accessibility, and participation at the core of everything we
-              do.
+              holdbodí Community Support brings together individuals, 
+              brands, and volunteers to support people and communities 
+              facing food insecurity, with transparency, accessibility, 
+              and participation at the core of what we do.  More than a 
+              donation platform, we’re building a place where support 
+              becomes visible, measurable, and easy to be part of — whatever 
+              your capacity to give.  We do this through e-Sàrá and community 
+              initiatives, providing food support where it is needed.
             </p>
             <p>
               More than a donation platform, we're building a place where

@@ -43,13 +43,14 @@ export function HowItWorks() {
               02 — How it works
             </span>
             <h2 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-cream/85 sm:text-5xl">
-              Together, we deliver food support intentionally and consistently.
+              We operate through two channels, both feeding into the same
+              process on the ground.
             </h2>
           </div>
-          <p className="max-w-[364px] font-body text-lg leading-relaxed text-cream/75">
+          {/* <p className="max-w-[364px] font-body text-lg leading-relaxed text-cream/75">
             We operate through two channels, both feeding into the same
             process on the ground.
-          </p>
+          </p> */}
         </div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
