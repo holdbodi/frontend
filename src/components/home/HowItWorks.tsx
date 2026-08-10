@@ -61,7 +61,7 @@ export function HowItWorks() {
                   {channel.title}
                 </h3>
                 <span
-                  className={`rounded-full border-[1.5px] border-ink px-3.5 py-1.5 font-mono text-[11px] uppercase text-ink ${channel.tagFilled ? "bg-secondary" : "bg-transparent"}`}
+                  className={`rounded-none border-[1.5px] border-ink px-3.5 py-1.5 font-mono text-[11px] uppercase text-ink ${channel.tagFilled ? "bg-secondary" : "bg-transparent"}`}
                 >
                   {channel.tag}
                 </span>

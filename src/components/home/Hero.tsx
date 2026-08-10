@@ -30,12 +30,12 @@ export function Hero() {
           </p>
           <div className="flex shrink-0 items-center gap-4">
             <Link to="/donate">
-              <Button variant="secondary" size="lg">
-                Donate now
+              <Button variant="secondary" size="lg"  className="rounded-none">
+                Donate
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg"  className="rounded-none">
                 Volunteer
               </Button>
             </Link>
