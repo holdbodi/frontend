@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import boySmiling from "@/assets/images/gallery-boy-smiling.jpg";
-import manBoxes from "@/assets/images/gallery-man-boxes.jpg";
+// import boySmiling from "@/assets/images/gallery-boy-smiling.jpg";
+// import manBoxes from "@/assets/images/gallery-man-boxes.jpg";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
