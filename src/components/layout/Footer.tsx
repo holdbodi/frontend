@@ -22,12 +22,11 @@ export function Footer() {
       <div className="container-page flex flex-col items-start justify-between gap-12 sm:flex-row sm:gap-8">
         <div className="flex max-w-[307px] flex-col gap-7">
           <p className="font-body text-base leading-relaxed text-cream/75">
-            Making food access easier, connecting people willing to help with
-            communities facing food insecurity across Nigeria.
+            Making food access easier
           </p>
           <div className="flex gap-3.5">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/holdbodi"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-mono text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
@@ -35,7 +34,7 @@ export function Footer() {
               Instagram
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/holdbodi"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-mono text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
