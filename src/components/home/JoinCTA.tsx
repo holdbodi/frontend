@@ -29,6 +29,11 @@ export function JoinCTA() {
               Donate food items
             </Button>
           </Link>
+          <Link to="/e-sara">
+            <Button variant="outline" size="lg">
+              e-Sàrá
+            </Button>
+          </Link>
           <Link to="/partner">
             <Button variant="outline" size="lg">
               Become a brand partner

@@ -4,8 +4,10 @@ const year = new Date().getFullYear();
 
 const getInvolvedLinks = [
   { label: "Donate", to: "/donate" },
-  { label: "Volunteer", to: "/volunteer" },
   { label: "Donate food items", to: "/food-donation" },
+  { label: "e-Sàrá", to: "/e-sara" },
+  { label: "Event Initiatives", to: "/event-initiatives" },
+  { label: "Volunteer", to: "/volunteer" },
   { label: "Become a partner", to: "/partner" },
 ];
 
