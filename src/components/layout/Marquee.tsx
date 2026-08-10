@@ -1,11 +1,16 @@
 const items = [
-  "making food access easier",
-  "one plate at a time",
-  "12,400+ people supported",
-  "lagos",
-  "ibadan",
-  "abeokuta",
-  "ikorodu",
+  "Donate",
+  "Volunteer",
+  "Partner",
+  "Donate",
+  "Volunteer",
+  "Partner",
+  "Donate",
+  "Volunteer",
+  "Partner",
+  "Donate",
+  "Volunteer",
+  "Partner",
 ];
 
 function TickerContent() {
