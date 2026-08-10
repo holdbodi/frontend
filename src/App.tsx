@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { DonateCallbackPage } from "@/pages/DonateCallbackPage";
 import { DonatePage } from "@/pages/DonatePage";
+import { EventInitiativesPage } from "@/pages/EventInitiativesPage";
 import { FoodDonationPage } from "@/pages/FoodDonationPage";
 import { HomePage } from "@/pages/HomePage";
 import { InitiativeDetailPage } from "@/pages/InitiativeDetailPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 import { PartnerPage } from "@/pages/PartnerPage";
+import { SaraPage } from "@/pages/SaraPage";
 import { VolunteerPage } from "@/pages/VolunteerPage";
 
 function ScrollToTop() {
@@ -30,6 +32,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/e-sara" element={<SaraPage />} />
+          <Route path="/event-initiatives" element={<EventInitiativesPage />} />
           <Route path="/initiatives/:slug" element={<InitiativeDetailPage />} />
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/donate/callback" element={<DonateCallbackPage />} />

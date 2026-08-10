@@ -1,3 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const channels = [
   {
     tag: "always active",
@@ -5,6 +8,7 @@ const channels = [
     description:
       "A standing digital giving initiative inspired by Sàrá — the familiar practice of giving alms to people in need. e-Sàrá keeps support active all year round, beyond commemorative days.",
     tagFilled: true,
+    href: "/e-sara",
   },
   {
     tag: "time-bound",
@@ -12,6 +16,7 @@ const channels = [
     description:
       "Campaigns tied to outreach moments and key dates like Children's Day, World Food Day, Christmas, Ramadan, and other community outreach initiatives throughout the year.",
     tagFilled: false,
+    href: "/event-initiatives",
   },
 ];
 
@@ -55,7 +60,11 @@ export function HowItWorks() {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {channels.map((channel) => (
-            <div key={channel.title} className="rounded-[22px] bg-card p-10">
+            <Link
+              key={channel.title}
+              to={channel.href}
+              className="group rounded-[22px] bg-card p-10 transition-colors hover:bg-cream"
+            >
               <div className="flex items-center justify-between">
                 <h3 className="font-display text-3xl font-extrabold tracking-tight text-ink sm:text-[40px]">
                   {channel.title}
@@ -69,7 +78,14 @@ export function HowItWorks() {
               <p className="mt-6 font-body text-base leading-relaxed text-ink sm:text-[17px]">
                 {channel.description}
               </p>
-            </div>
+              <span className="mt-6 inline-flex items-center gap-1.5 font-mono text-[12.5px] uppercase text-primary">
+                Learn more
+                <ArrowUpRight
+                  size={14}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </span>
+            </Link>
           ))}
         </div>
 
