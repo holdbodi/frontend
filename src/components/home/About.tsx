@@ -26,16 +26,14 @@ export function About() {
               holdbodí Community Support brings together individuals, 
               brands, and volunteers to support people and communities 
               facing food insecurity, with transparency, accessibility, 
-              and participation at the core of what we do.  More than a 
+              and participation at the core of what we do.  
+            </p>
+            <p>
+              More than a 
               donation platform, we’re building a place where support 
               becomes visible, measurable, and easy to be part of — whatever 
               your capacity to give.  We do this through e-Sàrá and community 
               initiatives, providing food support where it is needed.
-            </p>
-            <p>
-              More than a donation platform, we're building a place where
-              support becomes visible, measurable, and easy to be part of —
-              whatever your capacity to give looks like.
             </p>
           </div>
         </div>
