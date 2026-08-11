@@ -26,7 +26,7 @@ export function Hero() {
           <p className="max-w-[604px] font-body text-lg leading-relaxed text-ink sm:text-xl">
             Millions of Nigerians don't know where their next meal is coming
             from. holdbodí community support connects individuals, brands, and volunteers to
-            support people and cummunities who need food.
+            support people and communities who need food.
           </p>
           <div className="flex shrink-0 items-center gap-4">
             <Link to="/donate">
