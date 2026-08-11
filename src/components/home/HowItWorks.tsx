@@ -14,7 +14,7 @@ const channels = [
     tag: "Periodic",
     title: "Events",
     description:
-      "Campaigns tied to outreach moments and key dates like Children's Day, World Food Day, Christmas, Ramadan, and other community outreach initiatives throughout the year.",
+      "Campaigns tied to moments and key dates like Children's Day, World Food Day, Christmas, Ramadan, and other community outreach initiatives throughout the year.",
     tagFilled: false,
     href: "/event-initiatives",
   },

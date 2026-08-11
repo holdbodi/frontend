@@ -32,7 +32,11 @@ export function About() {
               More than a 
               donation platform, we’re building a place where support 
               becomes visible, measurable, and easy to be part of — whatever 
-              your capacity to give.  We do this through e-Sàrá and community 
+              your capacity to give.We do this through e-Sàrá and community 
+              initiatives, providing food support where it is needed.
+            </p>
+            <p>
+              We do this through e-Sàrá and community 
               initiatives, providing food support where it is needed.
             </p>
           </div>
