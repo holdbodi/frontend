@@ -1,5 +1,7 @@
-import aboutImage from "@/assets/images/about-volunteer-distributing.jpg";
-import girlPeaceSign from "@/assets/images/gallery-girl-peace-sign.jpg";
+// import aboutImage from "@/assets/images/about-volunteer-distributing.jpg";
+// import girlPeaceSign from "@/assets/images/gallery-girl-peace-sign.jpg";
+import aboutImage from "@/assets/images/about-image-left.jpg";
+import girlPeaceSign from "@/assets/images/about-image-right.jpg";
 
 export function About() {
   return (
@@ -19,7 +21,7 @@ export function About() {
             01 — About Community Support
           </span>
           <h2 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-5xl">
-            holdbodí Community Support .
+            holdbodí Community Support
           </h2>
           <div className="flex flex-col gap-5 font-body text-lg leading-relaxed text-ink sm:text-xl">
             <p>
@@ -32,8 +34,7 @@ export function About() {
               More than a 
               donation platform, we’re building a place where support 
               becomes visible, measurable, and easy to be part of — whatever 
-              your capacity to give.We do this through e-Sàrá and community 
-              initiatives, providing food support where it is needed.
+              your capacity to give.
             </p>
             <p>
               We do this through e-Sàrá and community 
