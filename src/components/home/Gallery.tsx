@@ -1,15 +1,15 @@
-import crowdNoodles from "@/assets/images/gallery-crowd-noodles.jpg";
-import boyPortrait from "@/assets/images/gallery-boy-portrait.jpg";
-import teamPhoto from "@/assets/images/team-photo.jpg";
-import manCarBoxes from "@/assets/images/gallery-man-car-boxes.jpg";
-import boySmiling from "@/assets/images/gallery-boy-smiling.jpg";
+import momentOne from "@/assets/images/momemt-one.jpg";
+import momentTwo from "@/assets/images/momemt-two.jpg";
+import momentThree from "@/assets/images/team-photo.jpg";
+import momentFour from "@/assets/images/gallery-man-car-boxes.jpg";
+import momentFive from "@/assets/images/gallery-boy-smiling.jpg";
 
 const photos = [
-  { src: crowdNoodles, alt: "Children receiving food packs at a holdbodí outreach event.", grow: 1.3 },
-  { src: boyPortrait, alt: "A child at a holdbodí distribution event.", grow: 1 },
-  { src: teamPhoto, alt: "The holdbodí team and partners at an outreach event.", grow: 1.3 },
-  { src: manCarBoxes, alt: "A volunteer loading food item boxes for distribution.", grow: 1 },
-  { src: boySmiling, alt: "A child smiling while holding up a food pack.", grow: 1.3 },
+  { src: momentOne, alt: "Children receiving food packs at a holdbodí outreach event.", grow: 1.3 },
+  { src: momentTwo, alt: "A child at a holdbodí distribution event.", grow: 1 },
+  { src: momentThree, alt: "The holdbodí team and partners at an outreach event.", grow: 1.3 },
+  { src: momentFour, alt: "A volunteer loading food item boxes for distribution.", grow: 1 },
+  { src: momentFive, alt: "A child smiling while holding up a food pack.", grow: 1.3 },
 ];
 
 export function Gallery() {
