@@ -17,7 +17,7 @@ export function About() {
         </div>
 
         <div className="flex flex-col gap-5">
-          <span className="font-mono text-[13px] uppercase text-ink">
+          <span className="font-body text-[13px] uppercase text-ink">
             01 — About Community Support
           </span>
           <h2 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-5xl">

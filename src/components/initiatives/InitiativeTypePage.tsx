@@ -64,7 +64,7 @@ export function InitiativeTypePage({
       <section className="relative overflow-hidden bg-primary-dark py-20 sm:py-28">
         <div className="container-page grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col gap-6">
-            <span className="font-mono text-[13px] uppercase text-secondary">{eyebrow}</span>
+            <span className="font-display text-[13px] uppercase text-secondary">{eyebrow}</span>
             <h1 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-cream/85 sm:text-5xl lg:text-[56px]">
               {headline}
             </h1>
@@ -93,7 +93,7 @@ export function InitiativeTypePage({
         <div className="container-page">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
             <div className="flex max-w-xl flex-col gap-5">
-              <span className="font-mono text-[13px] uppercase text-primary">
+              <span className="font-body text-[13px] uppercase text-primary">
                 currently running
               </span>
               <h2 className="font-display text-3xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-4xl">
@@ -108,7 +108,7 @@ export function InitiativeTypePage({
                     key={f.key}
                     onClick={() => setFilter(f.key)}
                     className={cx(
-                      "rounded-full border-[1.5px] border-ink px-5 py-2.5 font-mono text-[12.5px] uppercase transition-colors",
+                      "rounded-full border-[1.5px] border-ink px-5 py-2.5 font-body text-[12.5px] uppercase transition-colors",
                       filter === f.key
                         ? "bg-primary text-cream/85"
                         : "bg-transparent text-ink hover:bg-ink/5",
