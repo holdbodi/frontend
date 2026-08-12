@@ -1,7 +1,7 @@
-import momentOne from "@/assets/images/momemt-one.jpg";
-import momentTwo from "@/assets/images/momemt-two.jpg";
+import momentOne from "@/assets/images/moment-one.jpg";
+import momentTwo from "@/assets/images/moment-two.jpg";
 import momentThree from "@/assets/images/moment-three.jpg";
-import momentFour from "@/assets/images/gallery-man-car-boxes.jpg";
+import momentFour from "@/assets/images/moment-four.jpg";
 import momentFive from "@/assets/images/moment-five.jpg";
 
 const photos = [
