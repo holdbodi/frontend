@@ -31,7 +31,7 @@ export function Footer() {
               href="https://instagram.com/holdbodi"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-mono text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
+              className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-body text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
             >
               Instagram
             </a>
@@ -39,7 +39,7 @@ export function Footer() {
               href="https://twitter.com/holdbodi"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-mono text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
+              className="rounded-full border-[1.5px] border-cream/85 px-4 py-2 font-body text-[12.5px] uppercase text-cream/85 transition-colors hover:bg-cream/10"
             >
               X (Twitter)
             </a>
@@ -47,7 +47,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-3.5">
-          <h4 className="font-mono text-[12.5px] uppercase text-secondary">Get involved</h4>
+          <h4 className="font-body text-[12.5px] uppercase text-secondary">Get involved</h4>
           {getInvolvedLinks.map((link) => (
             <Link
               key={link.to}
@@ -60,7 +60,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-3.5">
-          <h4 className="font-mono text-[12.5px] uppercase text-secondary">Learn more</h4>
+          <h4 className="font-body text-[12.5px] uppercase text-secondary">Learn more</h4>
           {learnMoreLinks.map((link) => (
             <a
               key={link.href}
@@ -73,7 +73,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-3.5">
-          <h4 className="font-mono text-[12.5px] uppercase text-secondary">Contact</h4>
+          <h4 className="font-body text-[12.5px] uppercase text-secondary">Contact</h4>
           <a
             href="mailto:hello@holdbodi.org"
             className="font-body text-base text-cream/60 transition-colors hover:text-cream"
@@ -89,7 +89,7 @@ export function Footer() {
         </p>
       </div>
 
-      <div className="container-page flex flex-col items-center justify-between gap-2 py-[22px] font-mono text-[12.5px] text-cream/75 sm:flex-row">
+      <div className="container-page flex flex-col items-center justify-between gap-2 py-[22px] font-body text-[12.5px] text-cream/75 sm:flex-row">
         <p>© {year} holdbodí Community Support. All rights reserved.</p>
         <p className="uppercase">Making food access easier ✦</p>
       </div>

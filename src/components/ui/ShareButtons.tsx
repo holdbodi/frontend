@@ -11,7 +11,7 @@ interface ShareButtonsProps {
 }
 
 const pillBase =
-  "inline-flex items-center gap-2 rounded-full border-[1.5px] border-ink px-4 py-2 font-mono text-[12.5px] uppercase text-ink transition-colors hover:bg-ink hover:text-cream";
+  "inline-flex items-center gap-2 rounded-full border-[1.5px] border-ink px-4 py-2 font-body text-[12.5px] uppercase text-ink transition-colors hover:bg-ink hover:text-cream";
 
 export function ShareButtons({ url, text, className }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false);

@@ -32,7 +32,7 @@ interface FieldProps {
 export function Field({ label, htmlFor, error, hint, required, children }: FieldProps) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={htmlFor} className="font-mono text-xs uppercase tracking-wide text-ink">
+      <label htmlFor={htmlFor} className="font-body text-xs uppercase tracking-wide text-ink">
         {label}
         {required && <span className="text-primary"> *</span>}
       </label>
