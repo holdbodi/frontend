@@ -59,7 +59,7 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
           </div>
         )}
         <span
-          className={`absolute left-6 top-6 rounded-full border-[1.5px] px-4 py-2 font-mono text-[12.5px] uppercase ${badgeStyles[initiative.status]}`}
+          className={`absolute left-6 top-6 rounded-full border-[1.5px] px-4 py-2 font-body text-[12.5px] uppercase ${badgeStyles[initiative.status]}`}
         >
           {badgeLabels[initiative.status]}
         </span>
@@ -67,7 +67,7 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
 
       <div className={`flex flex-1 flex-col gap-7 p-6 ${featured ? "lg:p-11" : ""}`}>
         <Link to={detailHref} className="flex flex-col gap-2.5">
-          <div className="flex items-center gap-2.5 font-mono text-[13px] uppercase text-meta">
+          <div className="flex items-center gap-2.5 font-body text-[13px] uppercase text-meta">
             {featured && (
               <>
                 <span>featured</span>
@@ -112,7 +112,7 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
                     : "beneficiaries funded"}
               </span>
             </div>
-            <span className="font-mono text-xs uppercase text-ink-soft">
+            <span className="font-body text-xs uppercase text-ink-soft">
               {Math.round(initiative.progress_percentage)}% funded
             </span>
           </div>

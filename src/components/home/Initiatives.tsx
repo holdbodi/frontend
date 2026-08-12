@@ -30,7 +30,7 @@ export function Initiatives() {
       <div className="container-page">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <div className="flex max-w-xl flex-col gap-5">
-            <span className="font-mono text-[13px] uppercase text-primary">
+            <span className="font-body text-[13px] uppercase text-primary">
               03 — initiatives
             </span>
             <h2 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-5xl">
@@ -44,7 +44,7 @@ export function Initiatives() {
                 key={f.key}
                 onClick={() => setFilter(f.key)}
                 className={cx(
-                  "rounded-full border-[1.5px] border-ink px-5 py-2.5 font-mono text-[12.5px] uppercase transition-colors",
+                  "rounded-full border-[1.5px] border-ink px-5 py-2.5 font-body text-[12.5px] uppercase transition-colors",
                   filter === f.key ? "bg-primary text-cream/85" : "bg-transparent text-ink hover:bg-ink/5",
                 )}
               >

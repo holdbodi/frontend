@@ -18,7 +18,7 @@ export function Testimonials() {
     <section id="stories" className="scroll-mt-24 py-20 sm:py-28">
       <div className="container-page">
         <div className="flex max-w-2xl flex-col gap-5">
-          <span className="font-mono text-[13px] uppercase text-primary">05 — stories</span>
+          <span className="font-body text-[13px] uppercase text-primary">05 — stories</span>
           <h2 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-5xl">
             Voices from the community.
           </h2>
@@ -55,7 +55,7 @@ export function Testimonials() {
                 )}
                 <div>
                   <p className="font-body text-lg font-semibold text-ink">{testimonial.author_name}</p>
-                  <p className="font-mono text-[13px] uppercase text-ink-soft">
+                  <p className="font-body text-[13px] uppercase text-ink-soft">
                     {testimonial.initiative_title
                       ? `${roleLabels[testimonial.author_role]}, ${testimonial.initiative_title}`
                       : roleLabels[testimonial.author_role]}

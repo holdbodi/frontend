@@ -18,7 +18,7 @@ function TickerContent() {
     <div className="flex shrink-0 items-center gap-3 pr-3">
       {items.map((item, i) => (
         <span key={i} className="flex items-center gap-3">
-          <span className="whitespace-nowrap font-mono text-[13px] uppercase text-cream">
+          <span className="whitespace-nowrap font-body text-[13px] uppercase text-cream">
             {item}
           </span>
           <span aria-hidden className="text-secondary">

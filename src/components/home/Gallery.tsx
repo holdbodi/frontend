@@ -17,7 +17,7 @@ export function Gallery() {
     <section id="gallery" className="scroll-mt-24 border-y-[1.5px] border-ink py-20 sm:py-28">
       <div className="container-page">
         <div className="flex max-w-2xl flex-col gap-5">
-          <span className="font-mono text-[13px] uppercase text-primary">
+          <span className="font-body text-[13px] uppercase text-primary">
             04 — on the ground
           </span>
           <h2 className="font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-ink sm:text-5xl">

@@ -95,7 +95,7 @@ export function HowItWorks() {
               key={step.number}
               className={`flex flex-col gap-3.5 ${i > 0 ? "sm:border-l border-cream/25 sm:pl-8" : ""}`}
             >
-              <span className="font-mono text-[13px] uppercase text-secondary">
+              <span className="font-body text-[13px] uppercase text-secondary">
                 {step.number}
               </span>
               <h4 className="font-display text-xl font-extrabold tracking-tight text-cream/85 sm:text-2xl">

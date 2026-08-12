@@ -19,7 +19,7 @@ export function ImpactTicker() {
             <p className="font-display text-4xl font-extrabold leading-none tracking-tight text-ink sm:text-5xl lg:text-[72px]">
               {isLoading || !data ? "—" : <AnimatedNumber value={data[key]} />}
             </p>
-            <p className="mt-2 font-mono text-[13px] uppercase text-ink-soft">{label}</p>
+            <p className="mt-2 font-body text-[13px] uppercase text-ink-soft">{label}</p>
           </div>
         ))}
       </div>
