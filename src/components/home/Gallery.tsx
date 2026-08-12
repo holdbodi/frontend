@@ -1,8 +1,8 @@
 import momentOne from "@/assets/images/momemt-one.jpg";
 import momentTwo from "@/assets/images/momemt-two.jpg";
-import momentThree from "@/assets/images/team-photo.jpg";
+import momentThree from "@/assets/images/moment-three.jpg";
 import momentFour from "@/assets/images/gallery-man-car-boxes.jpg";
-import momentFive from "@/assets/images/gallery-boy-smiling.jpg";
+import momentFive from "@/assets/images/moment-five.jpg";
 
 const photos = [
   { src: momentOne, alt: "Children receiving food packs at a holdbodí outreach event.", grow: 1.3 },
