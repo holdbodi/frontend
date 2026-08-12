@@ -2,22 +2,22 @@
 
 @theme {
   /* Brand */
-  --color-primary: #175243; /* Brand Green */
-  --color-primary-dark: #123e33; /* Deep Green - dark section backgrounds */
-  --color-secondary: #f0a81c; /* Amber Accent */
+  --color-primary: #175243;
+  --color-primary-dark: #123e33;
+  --color-secondary: #f0a81c;
   --color-secondary-dark: #d99615;
 
   /* Neutrals */
-  --color-cream: #f5eedf; /* page background */
-  --color-card: #fdfaf0; /* card / input background */
+  --color-cream: #f5eedf;
+  --color-card: #fdfaf0;
   --color-ink: #131f19;
-  --color-ink-soft: #42524a; /* muted body text */
-  --color-meta: #7a857c; /* meta / label grey */
+  --color-ink-soft: #42524a;
+  --color-meta: #7a857c;
   --color-line: #e3ddcd;
 
   /* Type */
-  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "TT Norms", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Spline Sans Mono", ui-monospace, monospace;
 
   --animate-count-up: count-up 0.6s ease-out;
@@ -29,6 +29,7 @@
     opacity: 0;
     transform: translateY(0.4em);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -39,6 +40,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -78,6 +80,7 @@
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {

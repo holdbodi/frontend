@@ -6,11 +6,11 @@ import { Marquee } from "@/components/layout/Marquee";
 import { Button } from "@/components/ui/Button";
 
 const navLinks = [
-  { label: "about", href: "/#about" },
-  { label: "how it works", href: "/#how-it-works" },
-  { label: "initiatives", href: "/#initiatives" },
-  { label: "gallery", href: "/#gallery" },
-  { label: "stories", href: "/#stories" },
+  { label: "About", href: "/#about" },
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Initiatives", href: "/#initiatives" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Stories", href: "/#stories" },
 ];
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="font-mono text-[13px] uppercase text-ink transition-opacity hover:opacity-60"
+              className="font-body text-[14px] font-medium text-ink transition-opacity hover:opacity-60"
             >
               {link.label}
             </a>
@@ -45,6 +45,7 @@ export function Header() {
               Volunteer
             </Button>
           </NavLink>
+
           <NavLink to="/donate">
             <Button variant="primary" size="md">
               Donate
@@ -68,18 +69,20 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2.5 font-mono text-[13px] uppercase text-ink hover:bg-card"
+                className="rounded-lg px-3 py-2.5 font-body text-[14px] font-medium text-ink hover:bg-card"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </a>
             ))}
+
             <div className="mt-2 flex flex-col gap-2 px-3">
               <NavLink to="/volunteer" onClick={() => setIsOpen(false)}>
                 <Button variant="outline" className="w-full">
                   Volunteer
                 </Button>
               </NavLink>
+
               <NavLink to="/donate" onClick={() => setIsOpen(false)}>
                 <Button variant="primary" className="w-full">
                   Donate
