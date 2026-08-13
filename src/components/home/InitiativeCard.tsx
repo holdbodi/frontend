@@ -125,12 +125,15 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
           >
             View details
           </Link>
-          <Link
-            to={`/donate?initiative=${initiative.slug}`}
-            className="inline-flex flex-1 items-center justify-center rounded-full border-[1.5px] border-ink bg-primary px-6 py-3 font-body text-sm font-semibold text-cream/85 transition-colors hover:bg-primary-dark"
-          >
-            Donate
-          </Link>
+
+          {initiative.status !== "completed" && (
+            <Link
+              to={`/donate?initiative=${initiative.slug}`}
+              className="inline-flex flex-1 items-center justify-center rounded-full border-[1.5px] border-ink bg-primary px-6 py-3 font-body text-sm font-semibold text-cream/85 transition-colors hover:bg-primary-dark"
+            >
+              Donate
+            </Link>
+          )}
         </div>
       </div>
     </div>

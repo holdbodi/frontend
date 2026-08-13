@@ -179,15 +179,20 @@ export function InitiativeDetailPage() {
         </div>
 
         <div className="mt-10 flex flex-col items-start gap-8 sm:flex-row sm:items-center sm:justify-between">
-          <Link
-            to={`/donate?initiative=${initiative.slug}`}
-            className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full border-[1.5px] border-ink bg-secondary px-8 py-4 font-body text-base font-semibold text-ink shadow-[4px_4px_0_var(--color-ink)] transition-colors hover:bg-secondary-dark"
-          >
-            Donate to this initiative
-          </Link>
+          {initiative.status !== "completed" && (
+            <Link
+              to={`/donate?initiative=${initiative.slug}`}
+              className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full border-[1.5px] border-ink bg-secondary px-8 py-4 font-body text-base font-semibold text-ink shadow-[4px_4px_0_var(--color-ink)] transition-colors hover:bg-secondary-dark"
+            >
+              Donate to this initiative
+            </Link>
+          )}
 
           <div className="flex flex-col items-start gap-3 sm:items-end">
-            <p className="font-mono text-xs uppercase text-ink-soft">Share this initiative</p>
+            <p className="font-mono text-xs uppercase text-ink-soft">
+              Share this initiative
+            </p>
+
             <ShareButtons
               url={`${window.location.origin}/initiatives/${initiative.slug}`}
               text={`Support ${initiative.title} on holdbodí — help make food access easier across Nigeria.`}
