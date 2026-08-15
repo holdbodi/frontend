@@ -1,4 +1,5 @@
 import { About } from "@/components/home/About";
+import { BrandPartners } from "@/components/home/BrandPartners";
 import { Gallery } from "@/components/home/Gallery";
 import { Hero } from "@/components/home/Hero";
 import { HeroPhotoBand } from "@/components/home/HeroPhotoBand";
@@ -20,6 +21,7 @@ export function HomePage() {
       <Testimonials />
       <Gallery />
       <JoinCTA />
+      <BrandPartners />
     </>
   );
 }
