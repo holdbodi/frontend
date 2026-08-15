@@ -36,6 +36,8 @@ export function Marquee() {
       <div className="flex w-max animate-marquee">
         <TickerContent />
         <TickerContent />
+        <TickerContent />
+        <TickerContent />
       </div>
     </div>
   );
