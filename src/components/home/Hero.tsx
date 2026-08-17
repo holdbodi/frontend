@@ -25,7 +25,7 @@ export function Hero() {
         <div className="mt-12 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <p className="max-w-[604px] font-body text-lg leading-relaxed text-ink sm:text-xl">
             Millions of Nigerians don't know where their next meal is coming
-            from. holdbodí community support connects individuals, brands, and volunteers to
+            from. holdbodí Community Support connects individuals, brands, and volunteers to
             support people and communities who need food.
           </p>
           <div className="flex shrink-0 items-center gap-4">
