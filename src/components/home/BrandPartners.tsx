@@ -2,6 +2,7 @@ import brandTwo from "@/assets/images/srs-logo.png";
 import brandThree from "@/assets/images/leadway-logo.png";
 import brandFour from "@/assets/images/indomie-logo.jpg";
 import brandFive from "@/assets/images/konkere-logo.jpg";
+import brandSix from "@/assets/images/poshfield-logo.png";
 
 const partnerLogos = [
   {
@@ -19,6 +20,10 @@ const partnerLogos = [
   {
     name: "Konkere",
     src: brandFive,
+  },
+  {
+    name: "poshfield",
+    src: brandSix,
   },
 ];
 
