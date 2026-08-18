@@ -19,6 +19,7 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
+
     document.addEventListener("keydown", onKeyDown);
 
     const previousOverflow = document.body.style.overflow;
@@ -34,7 +35,7 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center px-5"
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
       role="dialog"
       aria-modal="true"
       aria-label={title}
@@ -49,7 +50,7 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
       {/* panel */}
       <div
         className={cx(
-          "relative w-full max-w-sm rounded-[20px] border-[1.5px] border-ink bg-card p-8 shadow-[6px_6px_0_var(--color-ink)]",
+          "relative w-full max-w-xs rounded-[16px] border-[1.5px] border-ink bg-card p-5 shadow-[5px_5px_0_var(--color-ink)]",
           className,
         )}
       >
@@ -57,15 +58,15 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
           type="button"
           onClick={onClose}
           aria-label="Close"
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full text-ink transition-colors hover:bg-ink/5"
+          className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full text-ink transition-colors hover:bg-ink/5"
         >
-          <span aria-hidden="true" className="text-xl leading-none">
+          <span aria-hidden="true" className="text-lg leading-none">
             &times;
           </span>
         </button>
 
         {title && (
-          <h2 className="mb-6 pr-8 font-display text-2xl font-extrabold leading-tight text-ink">
+          <h2 className="mb-4 pr-7 font-display text-xl font-extrabold leading-tight text-ink">
             {title}
           </h2>
         )}

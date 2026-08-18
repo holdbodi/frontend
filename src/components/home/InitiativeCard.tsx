@@ -83,11 +83,15 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
           >
             {initiative.title}
           </h3>
-          {featured && (
-            <p className="mt-1 font-body text-base leading-relaxed text-ink-soft">
-              {initiative.description}
-            </p>
-          )}
+          <p
+            className={`mt-1 font-body leading-relaxed text-ink-soft ${
+              featured ? "text-base" : "text-sm"
+            }`}
+          >
+            {initiative.description.length > (featured ? 150 : 90)
+              ? `${initiative.description.slice(0, featured ? 150 : 90).trim()}...`
+              : initiative.description}
+          </p>
         </Link>
 
         <div className="mt-auto flex flex-col gap-3.5">
