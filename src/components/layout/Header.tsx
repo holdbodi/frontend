@@ -21,7 +21,7 @@ export function Header() {
       <div className="container-page flex h-[102px] items-center justify-between">
         <Link
           to="/"
-          className="font-display text-[28px] font-bold tracking-tight text-ink"
+          className="font-display text-[28px] font-bold tracking-tight text-[#155C4F]"
           onClick={() => setIsOpen(false)}
         >
           holdbodí
