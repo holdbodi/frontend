@@ -88,9 +88,7 @@ export function InitiativeCard({ initiative, featured = false }: InitiativeCardP
               featured ? "text-base" : "text-sm"
             }`}
           >
-            {initiative.description.length > (featured ? 150 : 90)
-              ? `${initiative.description.slice(0, featured ? 150 : 90).trim()}...`
-              : initiative.description}
+            {initiative.description}
           </p>
         </Link>
 
